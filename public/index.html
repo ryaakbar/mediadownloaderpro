@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaDownloader — Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="marquee-top">
+        <div class="marquee-content">
+            FREE FOR EVERYONE <span class="marquee-dot">◆</span>
+            NO WATERMARK <span class="marquee-dot">◆</span>
+            V1.0 Pro <span class="marquee-dot">◆</span>
+            HIGH-SPEED ENGINE <span class="marquee-dot">◆</span>
+            NO LOGIN REQUIRED <span class="marquee-dot">◆</span>
+            MULTI-PLATFORM SUPPORT <span class="marquee-dot">◆</span>
+            POWERED BY RYAAKBAR <span class="marquee-dot">◆</span>
+            FREE FOR EVERYONE <span class="marquee-dot">◆</span>
+            NO WATERMARK <span class="marquee-dot">◆</span>
+            V1.0 Pro <span class="marquee-dot">◆</span>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="brand-container">
+            <div class="brand-logo-wrap">
+                <img src="https://i.pravatar.cc/150?img=12" alt="Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-glitch">Media<span>Downloader</span></div>
+        </div>
+        <div class="nav-right">
+            <div class="search-wrap" id="searchWrap">
+                <button class="search-toggle" id="searchToggle" onclick="toggleSearch()" title="Search History">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <div class="search-box" id="searchBox">
+                    <svg class="search-box-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Cari history kamu..." oninput="filterHistory(this.value)">
+                    <button class="search-close" onclick="toggleSearch()">✕</button>
+                </div>
+            </div>
+            <div class="status-pill">
+                <div class="dot-live"></div>
+                ONLINE
+            </div>
+            <a href="docs.html" class="nav-btn">Docs</a>
+        </div>
+    </nav>
+
+    <div class="search-dropdown" id="searchDropdown"></div>
+
+    <div class="container">
+
+        <div class="hero-header reveal">
+            <div class="hero-badge">💫 V1.0 Pro — Free & Open For All</div>
+            <h1 class="hero-title">Download <span class="grad-text">Anything,</span><br>Instantly.</h1>
+            <p class="hero-sub">Gratis, tanpa login, tanpa watermark. Support TikTok, Instagram, YouTube, Facebook, dan masih banyak lagi.</p>
+        </div>
+
+        <div class="glass-card main-card reveal" id="mainCard">
+            <div class="card-header">
+                <div class="avatar-wrap">
+                    <img src="https://galaxypfp.com/wp-content/uploads/2026/02/Clean-cut-pfp-for-boys-with-polished-aesthetic-appeal.jpg" alt="RYAAKBAR" class="avatar-img" id="userAvatar">
+                    <div class="avatar-ring"></div>
+                </div>
+                <div class="card-header-info">
+                    <div class="header-label">🌐 Open Access</div>
+                    <div class="header-title">Paste link media kamu di sini</div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="input-group">
+                    <label class="input-label">Target URL</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        </span>
+                        <input type="text" id="urlInput" class="cyber-input"
+                            placeholder="https://www.tiktok.com/@user/video/..."
+                            autocomplete="off">
+                        <button class="input-paste-btn" onclick="pasteFromClipboard()" title="Paste dari clipboard">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="platform-tags">
+                    <div class="tag">📱 TikTok</div>
+                    <div class="tag">📸 Instagram</div>
+                    <div class="tag">▶️ YouTube</div>
+                    <div class="tag">👥 Facebook</div>
+                    <div class="tag">𝕏 Twitter/X</div>
+                </div>
+
+                <button id="downloadBtn" onclick="fetchMedia()" class="cyber-button">
+                    <span class="btn-text">Start downloading</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="loading" class="glass-card loading-card hidden">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Lagi ngambil media kamu...</div>
+            <div class="loader-progress"><div class="loader-bar"></div></div>
+        </div>
+
+        <div id="error-msg" class="glass-card error-card hidden">
+            <div class="error-icon">⚠️</div>
+            <div>
+                <div class="error-title">Gagal Memproses Request</div>
+                <div class="error-body" id="error-text"></div>
+            </div>
+        </div>
+
+        <div id="result" class="result-stack"></div>
+
+        <footer class="sann-footer reveal">
+            <div class="footer-divider"></div>
+            <p class="footer-text">Powered by</p>
+            <p class="footer-brand">RYAAKBAR</p>
+            <p class="footer-sub">Free forever · No ads · No cap</p>
+        </footer>
+
+    </div>
+
+    <div class="scroll-btns" id="scrollBtns">
+        <button class="scroll-btn scroll-btn-top" id="scrollTopBtn" onclick="smoothScrollTo('top')" title="Scroll ke atas">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+        </button>
+        <button class="scroll-btn scroll-btn-down" id="scrollDownBtn" onclick="smoothScrollTo('bottom')" title="Scroll ke bawah">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
